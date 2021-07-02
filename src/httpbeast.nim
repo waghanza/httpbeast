@@ -494,7 +494,7 @@ proc run*(onRequest: OnRequest) {.inline.} =
   ## request.
   ##
   ## See the other ``run`` proc for more info.
-  run(onRequest, Settings(port: Port(8080), bindAddr: "", domain: Domain.AF_INET))
+  run(onRequest, initSettings(port=Port(8080), bindAddr="", domain=Domain.AF_INET))
 
 when false:
   proc close*(port: Port) =
